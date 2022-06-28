@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+
+{% block titulo %}
+Crear libro
+{% endblock %}
+
+{% block contenido %}
+
+    {% if form %}
+        <h2 style="margin-left:30rem">Complete los campos del nuevo producto</h2>
+        <form action="" method="POST" style="margin-left:40rem;margin-top:7rem" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+            <input type="submit" , value="Enviar">
+        </form>
+
+    {% endif %}
+    
+{% endblock %}

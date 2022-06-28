@@ -1,0 +1,54 @@
+{% extends 'index.html' %}
+
+{% load static %}
+{% block tituloQueCambia %}
+Administrativos
+{% endblock %}
+{% block contenidoQueCambia %}
+	<header id="head" class="secondary"></header>
+
+	<!-- container -->
+	<div class="container">
+
+		<div class="row">
+			
+			<!-- Article main content -->
+			<article class="col-xs-12 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Administrativos</h1>
+				</header>
+				
+				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h3 class="thin text-center">Ingresando a su cuenta</h3>
+							<p class="text-center text-muted">Por favor indique su usuario y contraseña para registrarse. </p>
+							<hr>
+							
+							<form action="" method="POST">
+								{% csrf_token %}
+								<div class="top-margin">
+									<label for="usuario">Usuario </label>
+									<input id="usuario" type="text" name="usuario" class="form-control">
+								</div>
+								<div class="top-margin">
+									<label for="contrasena">Contraseña </label>
+									<input id="contrasena" type="password" name="contrasena" class="form-control">
+								</div>
+
+								<hr>
+
+								<div class="row">
+									<div class="col-lg-10 text-right">
+										<button class="btn btn-action" type="submit">Inicio de Sesion</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+				
+			</article>
+			<!-- /Article -->
+{% endblock %}
